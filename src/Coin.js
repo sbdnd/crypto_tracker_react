@@ -1,12 +1,21 @@
-import React from 'react';
-import './Coin.css';
+import React from "react";
+import "./Coin.css";
 
-const Coin = ({image, name, symbol, price, volume, priceChange, marketcap}) => {
+const Coin = ({
+  image,
+  name,
+  symbol,
+  price,
+  volume,
+  priceChange,
+  marketcap,
+  click,
+}) => {
   return (
     <div className="coin-container">
       <div className="coin-row">
         <div className="coin">
-          <img src={image} alt="crypto"/>
+          <img src={image} alt="crypto" />
           <h1>{name}</h1>
           <p className="coin-symbol">{symbol}</p>
         </div>
@@ -24,7 +33,7 @@ const Coin = ({image, name, symbol, price, volume, priceChange, marketcap}) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Coin
+export default Coin;
