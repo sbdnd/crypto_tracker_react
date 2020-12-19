@@ -4,16 +4,18 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  background: #1a1a1c;
+
   color: #fff;
 }
 
 .coin-app {
+  font-family: "Montserrat", sans-serif;
+  background: #000002;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 64px;
+  padding-top: 64px;
   color: #fff;
 }
 

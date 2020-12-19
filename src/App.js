@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 import Coin from "./Coin";
+import HeroSection from "./HeroSection";
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -27,35 +28,38 @@ function App() {
   );
 
   return (
-    <div className="coin-app">
-      <div className="coin-search">
-        <h1 className="coin-text">Recherche ta Crypto</h1>
-        <form>
-          <input
-            type="text"
-            className="coin-input"
-            placeholder="Rechercher"
-            onChange={handleChange}
-          />
-        </form>
-      </div>
-      {filteredCoins.map((coin) => {
-        return (
-          coin.price_change_percentage_24h && (
-            <Coin
-              key={coin.id}
-              name={coin.name}
-              image={coin.image}
-              symbol={coin.symbol}
-              marketcap={coin.market_cap}
-              price={coin.current_price}
-              priceChange={coin.price_change_percentage_24h}
-              volume={coin.total_volume}
+    <>
+      <HeroSection />
+      <div className="coin-app">
+        <div className="coin-search">
+          <h1 className="coin-text">Recherche ta Crypto</h1>
+          <form>
+            <input
+              type="text"
+              className="coin-input"
+              placeholder="Rechercher"
+              onChange={handleChange}
             />
-          )
-        );
-      })}
-    </div>
+          </form>
+        </div>
+        {filteredCoins.map((coin) => {
+          return (
+            coin.price_change_percentage_24h && (
+              <Coin
+                key={coin.id}
+                name={coin.name}
+                image={coin.image}
+                symbol={coin.symbol}
+                marketcap={coin.market_cap}
+                price={coin.current_price}
+                priceChange={coin.price_change_percentage_24h}
+                volume={coin.total_volume}
+              />
+            )
+          );
+        })}
+      </div>
+    </>
   );
 }
 
