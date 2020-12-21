@@ -1,28 +1,32 @@
 .hero-container {
-  background-color: #000002;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 video {
+  position: fixed;
+  top: 0;
+  left: 0;
   max-width: 100%;
   min-height: 100vh;
+  z-index: -100;
 }
 
 .hero-title {
   font-family: "Bungee Outline", cursive;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   font-size: 4rem;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+}
+
+.hero-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .hero-title button {
   font-family: "Montserrat", sans-serif;
-  position: absolute;
-  top: 150%;
-  left: 50%;
-  transform: translate(-50%, -150%);
   font-size: 3rem;
   font-weight: 800;
   padding: 1rem;

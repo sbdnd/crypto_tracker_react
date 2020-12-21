@@ -1,7 +1,7 @@
 import React from "react";
-import "./Coin.css";
+import "./Coins.css";
 
-const Coin = ({
+const Coins = ({
   image,
   name,
   symbol,
@@ -36,4 +36,4 @@ const Coin = ({
   );
 };
 
-export default Coin;
+export default Coins;

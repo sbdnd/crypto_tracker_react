@@ -1,4 +1,6 @@
 .coin-container {
+  font-family: "Montserrat", sans-serif;
+  background: #073b53;
   display: flex;
   justify-content: center;
 }
