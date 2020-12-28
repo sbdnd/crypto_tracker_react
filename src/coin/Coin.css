@@ -1,0 +1,126 @@
+.coin-display-bg {
+  background: url(../img/img-3.jpg) no-repeat center / cover;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+}
+.coin-display-container {
+  background: rgba(0, 0, 0, 0.8);
+  font-family: "Montserrat", sans-serif;
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .coin-display-image {
+  animation: bouncing-loader 0.4s infinite alternate;
+} */
+
+img {
+  width: 150px;
+}
+
+.coin-display-name {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.coin-display-symbol {
+  font-size: 1.8rem;
+}
+
+.coin-display-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coin-display-price {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin: 1rem;
+  color: #ff65bd;
+}
+.coin-display-percentage {
+  font-size: 2rem;
+  margin: 1rem;
+  color: rgb(17, 128, 17);
+}
+
+.coin-display-volume,
+.coin-display-marketcap {
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #d7d7d7;
+  border-radius: 50px;
+}
+.coin-display-volume:hover,
+.coin-display-marketcap:hover {
+  background: #fff;
+  color: #000;
+  transition: 0.5s;
+  border: 1px solid #d7d7d7;
+  border-radius: 50px;
+}
+
+.btn-return {
+  font-size: 2.5rem;
+  background: none;
+  margin-bottom: 1rem;
+}
+
+.coin-data-trend {
+  display: flex;
+  align-items: center;
+}
+
+.coin-trend {
+  font-size: 3rem;
+}
+
+.green {
+  color: #33ee52;
+}
+
+.red {
+  color: #f00606;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+  .coin-display-container,
+  .coin-display-volume,
+  .coin-display-marketcap {
+    font-size: 1rem;
+  }
+  .coin-display-price {
+    font-size: 3.5rem;
+  }
+  .coin-display-percentage {
+    font-size: 2.5rem;
+  }
+  .coin-trend {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  img {
+    width: 70px;
+  }
+}
+
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.5;
+    transform: translate3d(0, -1rem, 0);
+  }
+}
