@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
+// import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
 import { IconContext } from "react-icons";
-import "./Navbar.css";
+import "./Sidebar.css";
 
-function Navbar() {
+function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -25,7 +25,7 @@ function Navbar() {
             <ul className="nav-menu-items" onClick={showSidebar}>
               <li className="navbar-toggle">
                 <Link to="#" className="menu-bars">
-                  <AiIcons.AiOutlineClose />
+                  <FaIcons.FaArrowLeft />
                 </Link>
               </li>
               {SidebarData.map((data, index) => {
@@ -52,4 +52,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Sidebar;

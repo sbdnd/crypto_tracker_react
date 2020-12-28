@@ -1,0 +1,337 @@
+/* style general */
+
+.hero-container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  max-width: 100%;
+  min-height: 100vh;
+  z-index: -100;
+}
+
+.hero-title {
+  font-family: "Bungee Outline", cursive;
+  font-size: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* title effect */
+
+.sign {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ffe6ff;
+  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+
+.btn-2 {
+  display: none;
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+  28%,
+  33% {
+    color: #ff65bd;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #ff2483;
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  margin: 0;
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  margin: 0;
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #6b1839;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* button effect */
+
+#neonShadow {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  height: 6rem;
+  width: 400px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+#neonShadow:hover {
+  animation: animate 8s linear infinite, glow 1.5s infinite;
+  transition: 0.5s;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 10px 10px 20px rgb(93, 52, 168), -5px -5px 20px rgb(93, 52, 168);
+  }
+
+  50% {
+    box-shadow: 10px 10px 20px rgb(81, 224, 210),
+      -5px -5px 20px rgb(81, 224, 210);
+  }
+  100% {
+    box-shadow: 10px 10px 20px rgb(93, 52, 168), -5px -5px 20px rgb(93, 52, 168);
+  }
+}
+
+@media screen and (max-width: 1860px) {
+  .hero-title {
+    font-family: "Bungee Outline", cursive;
+    font-size: 2.8rem;
+  }
+
+  .sign {
+    position: relative;
+    z-index: -1;
+  }
+
+  #neonShadow {
+    font-size: 2rem;
+    height: 6rem;
+    width: 20rem;
+  }
+  .btn-2 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 651px) and (max-width: 1859px) {
+  .btn-2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .hero-container {
+    min-height: 90vh;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-family: "Bungee Outline", cursive;
+    font-size: 1.5rem;
+  }
+
+  .sign {
+    position: relative;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+
+  .sign-span {
+    margin: 0;
+    display: inline-block;
+    height: 50px;
+  }
+
+  #neonShadow {
+    height: 5rem;
+    width: 7rem;
+  }
+
+  .btn-1 {
+    display: none;
+  }
+  .btn-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bit {
+    font-size: 40px;
+  }
+}
